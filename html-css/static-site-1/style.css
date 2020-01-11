@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    border: none;
+}
+
+body {    
+    background: #f5f5f5 url('images/fone.jpg') left top repeat-x;
+    color: #555555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.3;
+
+}
+
+.root {
+    margin: 26px auto;
+    max-width: 755px;
+    width: 755px;
+}
+
+.logo {
+    display: block;
+    height: 175px;
+    margin: 0 auto;
+    width: 403px;
+}
+
+nav ul {
+    display: flex;
+    background: #ffffff;
+    box-shadow: 0 0 1px 2px #f3f3f3;
+    border-bottom: 3px solid #9dc5f0;  
+    justify-content: space-around;
+    list-style: none;
+    margin: 20px 0;
+}
+
+nav li {  
+    border-left: 2px solid #f4f4f4; 
+    padding: 8px 25px; 
+}
+
+nav li:first-child {
+    border-left: none;
+}
+
+nav a {
+    color: #5f5d67;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.nav__a-active, nav a:hover {
+    color: #000000;
+    /* font-weight: bold; */
+    text-decoration: #000000 underline solid;
+}
+
+.content {
+    display: flex;
+}
+
+section, aside {
+    background: #ffffff;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .12);
+    margin: 20px 0;
+    padding: 20px;
+}
+
+section {
+    margin-right: 10px; 
+}
+
+section h1, h2, h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+
+section h2 {
+    font-size: 20px;
+}
+
+
+section h3 {
+    font-size: 18px;
+}
+
+section p {
+    margin: 30px 0; 
+}
+
+aside {
+    color: #333333;
+}
+
+aside h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+
+aside h2 {
+    font-size: 20px;
+}
+
+
+aside h3 {
+    font-size: 18px;
+}
+
+aside p {   
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+footer p {
+    color: #5f5d67;
+}
+
+
+

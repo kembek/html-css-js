@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Loading</title>
+    <style>
+      :root {
+        --square: 120px;
+        --base-color: black;
+        --secondary-color: red;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .loader {
+        align-items: center;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        height: var(--square);
+        width: var(--square);
+      }
+
+      .loader__inner {
+        animation: loading linear 1s infinite;
+        background: #000;
+        border: 10px double transparent;
+        border-radius: 50%;
+        border-top-color: var(--secondary-color);
+        border-bottom-color: var(--secondary-color);
+        box-sizing: border-box;
+        height: 100%;
+        position: absolute;
+        transition: all 0.3s linear;
+        width: 100%;
+      }
+
+      .loader__text {
+        animation: blink linear 3s infinite;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: white;
+        cursor: default;
+        font-weight: bolder;
+        text-transform: uppercase;
+        text-shadow: 0 0 5px red;
+        z-index: 9999;
+      }
+
+      .loader:hover {
+        cursor: pointer;
+      }
+
+      @keyframes loading {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes blink {
+        from {
+          text-shadow: 0 0 5px red;
+        }
+
+        to {
+          text-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="loader__text">Kembek</div>
+      <div class="loader__inner"></div>
+    </div>
+    <div class="loader">
+      <div class="loader__text">Kembek</div>
+      <div class="loader__inner"></div>
+    </div>
+    <div class="loader">
+      <div class="loader__text">Kembek</div>
+      <div class="loader__inner"></div>
+    </div>
+    <div class="loader">
+      <div class="loader__text">Kembek</div>
+      <div class="loader__inner"></div>
+    </div>
+  </body>
+</html>

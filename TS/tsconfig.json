@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "types": ["node"]
+  },
+  "include": ["**/src/**/*.ts"]
+}

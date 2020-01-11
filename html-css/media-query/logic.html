@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Logic media query</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .block {
+        width: 100px;
+        height: 100px;
+        background: yellow;
+        margin: 5px;
+      }
+
+      @media screen {
+        .container {
+          flex-direction: column;
+          background: #000;
+        }
+      }
+
+      @media only print {
+        .container {
+          flex-direction: row;
+          background: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="block">1</div>
+      <div class="block">2</div>
+      <div class="block">3</div>
+      <div class="block">4</div>
+    </div>
+  </body>
+</html>

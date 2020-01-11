@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Margin</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      *,
+      :after,
+      :before {
+        box-sizing: border-box;
+      }
+
+      .container {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .segment {
+        border: 1px solid;
+        padding: 5px;
+        /* margin: 5px; */
+      }
+
+      .red {
+        background: #f00;
+      }
+
+      .green {
+        background: #0f0;
+      }
+
+      .yellow {
+        background: #ff0;
+      }
+
+      .black {
+        background: #000;
+      }
+
+      .text-white {
+        color: #fff;
+      }
+
+      .n-m-5 {
+        margin: -5px;
+      }
+
+      [id] {
+        cursor: pointer;
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="segment yellow">
+        Segment 1
+        <div class="segment green text-white n-m-5">Segment 2</div>
+      </div>
+      <div class="segment black text-white">Segment 2</div>
+      <div class="segment green">Segment 3</div>
+      <div class="segment red">Segment 4</div>
+      <button id="btn">Toggle margin</button>
+      <div class="message">with negative</div>
+    </div>
+
+    <script>
+      const segment = document.querySelector(".n-m-5");
+      const message = document.querySelector(".message");
+
+      btn.addEventListener("click", function(event) {
+        
+        if (segment.classList.contains("n-m-5")) {
+          message.textContent = "without negative";          
+        } else {
+          message.textContent = "with negative";
+        }
+        segment.classList.toggle("n-m-5");
+      });
+    </script>
+  </body>
+</html>

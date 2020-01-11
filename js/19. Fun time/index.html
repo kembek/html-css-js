@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       
+
+        input[type="text"] {
+            color: red;
+            font-size: 42px;
+        }
+        input[checked] ~ label {
+            color:red;
+        }
+
+        input[checked] + label {
+           font-size: 32px;
+        }
+
+        div:active {
+            background: rgba(0, 255, 0, .4);
+        }
+
+        div:focus {
+            background: yellow;
+        }
+
+        mark {color: red; background: none;}
+    </style>
+</head>
+<body>
+    <form>
+        <div tabindex="1">
+            <input type="checkbox" checked="checked" value="You robot" id="check1" />
+            <label for="check1">Some</label>
+           
+        </div>
+        <div>
+            <label for="check2">Some 2</label>
+            <input type="checkbox" value="You robot 1" id="check2" />
+        </div>
+        <div>
+            <label for="check3">Some 3</label>
+            <input type="checkbox" value="You robot 2" id="check3" />
+        </div>
+        <div>
+            <input type="text" value="" minlength="3" maxlength="10" min="5" max="10" size="10"/>
+        </div>
+        <input type="submit" value="send" />
+    </form>
+    <div>
+        <h2>Sporting goods</h2>
+        <dl>
+            <dt>Football</dt>
+            <dd>$49.99</dd>
+            <dt>Baseball</dt>
+            <dd>$9.99</dd>
+            <dt><mark>BasketBall</mark></dt>
+            <dd>$29.99</dd>
+        </dl>
+        <h2>Electronics</h2>
+        <dl>
+            <dt>iPod touch</dt>
+            <dd>$99.99</dd>
+            <dt><mark>iPhone 5</mark></dt>
+            <dd>$399.99</dd>
+            <dt>Nexus 7</dt>
+            <dd>$199.99</dd>
+        </dl>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

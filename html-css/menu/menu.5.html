@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Menu dropdown with checkbox adaptive collapse</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        transition: all 1s ease-in-out;
+      }
+
+      .menu-list {
+        font-size: 0;
+        background: black;
+      }
+
+      .menu-list_main {
+        display: flex;
+      }
+
+      .menu-list_sub-domain {
+        position: absolute;
+        width: 100%;
+        display: none;
+        z-index: 2;
+      }
+
+      .menu-list__item {
+        flex: 1;
+        flex-direction: row;
+        height: 100%;
+        position: relative;
+      }
+
+      .menu-list__item:hover > .menu-list_sub-domain {
+        display: block;
+      }
+
+      .menu-list__link {
+        display: block;
+        font-size: 16px;
+        padding: 15px;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all 1s ease-in-out;
+        cursor: pointer;
+      }
+
+
+      .menu__collapse {
+        /* display: none; */
+      }
+
+      .menu__hide {
+        position: fixed;
+        display: none;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+      }
+
+
+      .menu-list__link:hover {
+        color: black;
+        background: lightgrey;
+
+        animation: border-spinner 3s linear infinite;
+        transition: all 1s ease-in-out;
+
+        transition: animation 1s linear;
+      }
+
+      .menu__collapse:checked + .menu__hide + .menu-list_sub-domain {
+        display: block;
+        background: yellow;
+        /* z-index: 9999; */
+      }
+
+      .menu__collapse:checked + .menu__hide {
+        display: block;
+      }
+
+      .menu__collapse:checked + .menu-list_sub-domain .menu-list__link {
+        color: black;
+      }
+
+      .menu__collapse:checked + .menu-list_main {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .divider {
+        height: 25px;
+        width: 30px;
+        display: flex;
+        align-content: space-around;
+        flex-direction: column;
+        padding: 5px;
+        cursor: pointer;
+      }
+
+      .divider-item {
+        height: 5px;
+        width: 100%;
+        border-bottom: 2.5px solid black;
+        border-radius: 5px;
+      }
+
+      .menu__collapse-button {
+        display: none;
+        background: lightgray;
+        padding: 20px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+      }
+
+      @keyframes border-spinner {
+        from {
+          background: linear-gradient(to bottom right, white, black);
+        }
+
+        to {
+          background: linear-gradient(to top left, white, black);
+        }
+      }
+
+      @media (max-width: 350px) {
+        .menu__collapse-button {
+          display: inline-block;
+        }
+
+        .menu-list_main {
+          display: none;
+          padding-top: 65px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu">
+      <label for="menu__collapse" class="menu__collapse-button">
+        <div class="divider">
+          <div class="divider-item"></div>
+          <div class="divider-item"></div>
+          <div class="divider-item"></div>
+        </div>
+      </label>
+      <input type="checkbox" id="menu__collapse" class="menu__collapse" />
+
+      <menu class="menu-list menu-list_main">
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#">item 1</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#">item 2</a>
+        </li>
+        <li class="menu-list__item">
+          <label for="menu__sub-1" class="menu-list__link"
+            >item 3 with subdomain</label
+          >
+          <label for="menu__sub-1" class="menu__hide"></label>
+          <input type="checkbox" id="menu__sub-1" class="menu__collapse" />
+          <menu class="menu-list menu-list_sub-domain">
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="#">sub-domain 1</a>
+            </li>
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="#">sub-domain 2</a>
+            </li>
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="#">sub-domain 3</a>
+            </li>
+          </menu>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#">item 4</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#">item 5</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#">item 6</a>
+        </li>
+      </menu>
+    </nav>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
+    consectetur! Aspernatur, iusto dolorem unde natus quisquam odit repudiandae
+    soluta quaerat alias, tempore nihil, architecto nobis officia modi
+    consectetur quas aliquid! Soluta ipsam, corrupti vitae atque in eum quas
+    delectus itaque officiis quisquam possimus similique asperiores non aliquam
+    dicta minus velit fugiat at eveniet libero? Minima, quos. Minima
+    reprehenderit asperiores dolorem! Saepe sed porro ex incidunt vero quisquam
+    ullam dicta fugit. Porro dignissimos temporibus suscipit a perspiciatis
+    ipsum itaque reiciendis vitae assumenda, blanditiis ut ipsa quaerat rem
+    minima ab nesciunt hic! Distinctio ipsam harum illum obcaecati at optio
+    recusandae quaerat est rerum quo. Vel architecto, inventore voluptatum,
+    aspernatur, repellat possimus dignissimos eveniet fuga est sed quas quod
+    quos beatae eligendi rerum. Iusto ad pariatur minus harum, eius nobis
+    doloremque inventore, itaque modi atque eos molestias quidem doloribus. Ab
+    tempore voluptatem atque sed, non in ullam ea, soluta, iusto nobis labore
+    veritatis. Obcaecati praesentium error ipsam incidunt, non laudantium! Nisi
+    quod fugiat ab hic natus officiis inventore impedit. Deserunt error corrupti
+    incidunt autem in et quas sed cum perspiciatis quisquam, alias soluta?
+    Laudantium saepe assumenda, quis unde, id quo, sapiente iure distinctio illo
+    dolor molestiae nostrum voluptatum doloremque eveniet. Aut excepturi saepe
+    repellendus, laboriosam nemo accusantium maiores amet necessitatibus
+    repellat distinctio perspiciatis? Quia alias, nobis omnis, impedit
+    repudiandae praesentium quae voluptatibus quos est aperiam eaque magni amet
+    accusantium! Ad, dolorum explicabo ipsa accusantium rem voluptatem, adipisci
+    ab porro veritatis hic totam saepe? Illum ab praesentium sed obcaecati
+    minima deserunt. Obcaecati blanditiis et omnis unde harum veritatis nesciunt
+    praesentium cupiditate! Quod, facilis aliquid. Eum temporibus, dolorem iste
+    ut eius vel aspernatur dolor expedita! Excepturi illum dolor repellat
+    eligendi exercitationem officia, vel, iste dolorem sed suscipit harum at
+    quia odio cumque ea, sunt reprehenderit laborum quibusdam quasi hic debitis
+    ratione deleniti? Voluptates, quaerat itaque.
+  </body>
+</html>

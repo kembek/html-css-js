@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Font-size</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        font-size: 16px;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .box {
+        flex: 1;
+        padding: 20px;
+        width: 100%;
+        min-height: 190px;
+        max-height: 200px;
+        min-width: 265px;
+        max-width: 270px;
+      }
+
+      .box > *:not(:last-child) {
+        margin-bottom: 3px;
+      }
+
+      .box:nth-child(odd) {
+        background: #f8f8f8;
+      }
+
+      .box:nth-child(even) {
+        background: #c1c1c1;
+      }
+
+      .title {
+        font-weight: bold;
+        margin-bottom: 8px !important;
+        border-bottom: 2px solid tomato;
+        text-transform: uppercase;
+      }
+    </style>
+    <style>
+      /* PIXEL --- BEGIN */
+      .box-px > .f-text {
+        font-size: 16px;
+      }
+      .box-px > .s-text {
+        font-size: 8px;
+      }
+      .box-px > .t-text {
+        font-size: 32px;
+      }
+      /* PIXEL --- END */
+
+      /* PERCENT --- BEGIN */
+      .box-percent > .f-text {
+        font-size: 100%;
+      }
+      .box-percent > .s-text {
+        font-size: 50%;
+      }
+      .box-percent > .t-text {
+        font-size: 200%;
+      }
+      /* PERCENT --- END */
+
+      /* EM --- BEGIN */
+      .box-em > .f-text {
+        font-size: 1em;
+      }
+      .box-em > .s-text {
+        font-size: 0.5em;
+      }
+      .box-em > .t-text {
+        font-size: 2em;
+      }
+      /* EM --- END */
+
+      /* REM --- BEGIN */
+      .box-rem > .f-text {
+        font-size: 1rem;
+      }
+      .box-rem > .s-text {
+        font-size: 0.5rem;
+      }
+      .box-rem > .t-text {
+        font-size: 2rem;
+      }
+      /* REM --- END */
+
+      /* VH --- BEGIN */
+      .box-vh > .f-text {
+        font-size: 1vh;
+      }
+      .box-vh > .s-text {
+        font-size: 0.5vh;
+      }
+      .box-vh > .t-text {
+        font-size: 2vh;
+      }
+      /* VH --- END */
+
+      /* VW --- BEGIN */
+      .box-vw > .f-text {
+        font-size: 1vh;
+      }
+      .box-vw > .s-text {
+        font-size: 0.5vw;
+      }
+      .box-vw > .t-text {
+        font-size: 2vw;
+      }
+      /* VW --- END */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box-px">
+        <h1 class="title">px</h1>
+        <p class="f-text">font-size: 16px</p>
+        <p class="s-text">font-size: 8px</p>
+        <p class="t-text">font-size: 32px</p>
+      </div>
+      <div class="box box-percent">
+        <h1 class="title">percent(%)</h1>
+        <p class="f-text">font-size: 100%</p>
+        <p class="s-text">font-size: 50%</p>
+        <p class="t-text">font-size: 200%</p>
+      </div>
+      <div class="box box-em">
+        <h1 class="title">em</h1>
+        <p class="f-text">font-size: 1em</p>
+        <p class="s-text">font-size: 0.5em</p>
+        <p class="t-text">font-size: 2em</p>
+      </div>
+      <div class="box box-rem">
+        <h1 class="title">rem</h1>
+        <p class="f-text">font-size: 1rem</p>
+        <p class="s-text">font-size: 0.5rem</p>
+        <p class="t-text">font-size: 2rem</p>
+      </div>
+      <div class="box box-vh">
+        <h1 class="title">vh</h1>
+        <p class="f-text">font-size: 1vh</p>
+        <p class="s-text">font-size: 0.5vh</p>
+        <p class="t-text">font-size: 2vh</p>
+      </div>
+      <div class="box box-vw">
+        <h1 class="title">vw</h1>
+        <p class="f-text">font-size: 1vw</p>
+        <p class="s-text">font-size: 0.5vw</p>
+        <p class="t-text">font-size: 2vw</p>
+      </div>
+    </div>
+  </body>
+</html>

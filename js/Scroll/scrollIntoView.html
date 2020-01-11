@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>scrollIntoView</title>
+    <style>
+      /* .main {
+        height: 100vh;
+      } */
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .main__inner {
+        border: 2px solid red;
+        background: black;
+        height: 100vh;
+        padding: 50px;
+      }
+
+      .main__inner_top {
+        color: tomato;
+      }
+
+      .main__inner_first {
+        color: white;
+      }
+
+      .main__inner_second {
+        color: yellow;
+      }
+
+      .page-list__item {
+        cursor: pointer;
+      }
+
+      .main__title {
+        text-align: center;
+        font-size: 32px;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <section class="main__inner main__inner_top">
+        <h2 class="main__title">Top</h2>
+        <ul class="page-list">
+          <li class="page-list__item page-list__item_first">First page</li>
+          <li class="page-list__item page-list__item_second">Second page</li>
+        </ul>
+      </section>
+      <section class="main__inner main__inner_first">
+        <h2 class="main__title">First</h2>
+        <ul class="page-list">
+          <li class="page-list__item page-list__item_top">Top page</li>
+          <li class="page-list__item page-list__item_second">Second page</li>
+        </ul>
+      </section>
+      <section class="main__inner main__inner_second">
+        <h2 class="main__title">Second</h2>
+        <ul class="page-list">
+          <li class="page-list__item page-list__item_top">Top page</li>
+          <li class="page-list__item page-list__item_first">First page</li>
+        </ul>
+      </section>
+    </main>
+    <script src="scrollIntoView.js"></script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Button OOCSS</title>
+    <style>
+      body {
+        font-size: 16px;
+      }
+
+      .btn {
+        padding: 10px 18px;
+        display: inline-block;
+      }
+
+      .red.btn {
+        background: red;
+        color: black;
+      }
+
+      .large.btn {
+        padding: 15px 26px;
+        font-size: 1.05em;
+      }
+
+      .cnt.btn {
+        text-align: center;
+      }
+
+      .lt.btn {
+        text-align: left;
+      }
+
+      .mx-w-100 {
+        max-width: 100px;
+      }
+
+      .mn-w-600 {
+        min-width: 300px;
+      }
+
+      .h-50 {
+        height: 50px;
+      }
+
+      .bg-red {
+        background: red;
+      }
+
+      .bg-yellow {
+        background: yellow;
+      }
+
+      .wrapper {
+        padding: 20px;
+      }
+
+      @media screen and (max-width: 500px) {
+        .large.btn {
+          font-size: 3em;
+        }
+      }
+
+      @media screen and (min-width: 500px) {
+        body {
+          background: #000;
+          color: white;
+        }
+      }
+
+      /* @media (max-width: 400px) and (orientation: portrait) {
+        body {
+          background: yellow;
+        }
+      }
+
+      @media (max-width: 400px) and (orientation: landscape) {
+        body {
+          background: green;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <button class="red large lt btn">Click me!</button>
+
+    <div class="wrapper">
+      <div class="bg-red h-50 mx-w-100 container"></div>
+    </div>
+
+    <div class="wrapper">
+      <div class="bg-yellow h-50 mn-w-600 container"></div>
+    </div>
+  </body>
+</html>

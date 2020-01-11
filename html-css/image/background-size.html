@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Background size</title>
+    <style>
+      .container {
+        align-items: center;
+        background: yellow;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .container__image {
+        border: 2px solid;
+        background: url("img-small.png") top center no-repeat;
+        width: 500px;
+        height: 300px;
+      }
+
+      .container__image.size {
+        background-size: 500px 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Background with size</h2>
+      <div class="container__image size"></div>
+      <h2>Original</h2>
+      <div class="container__image"></div>
+    </div>
+  </body>
+</html>

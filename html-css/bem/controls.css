@@ -1,0 +1,18 @@
+.controls__button {
+  border: 2px solid yellow;
+  box-shadow: 0 0 3px 1px darkblue;
+  margin: 5px;
+}
+
+.controls__button_function_alert {
+  color: green;
+}
+
+.controls__button_function_confirm {
+  color: yellow;
+}
+
+.controls__button_function_prompt {
+  color: blue;
+}
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Word wrap</title>
+  <style>
+    .small {
+      border: 2px solid;
+      width: 200px;
+    }
+
+    .word-wrap {
+      word-wrap: break-word;
+      word-break: break-all; 
+      word-spacing: .01em;
+    }
+  </style>
+</head>
+<body>
+  <h2>Without word-wrap</h2>
+  <div  class="small">Loremipsumdolorsitametconsecteturadipisicingelit.Quaerat nulla amet, sint exercitationem laudantium maxime reiciendis vitae saepe maiores. Vero explicabo itaque quis. Consequatur repellat quidem saepe, eum pariatur dolores?</div>
+
+  <h2>With word-wrap</h2>
+  <div class="small word-wrap">Loremipsumdolorsitametconsecteturadipisicingelit.Quaerat nulla amet, sint exercitationem laudantium maxime reiciendis vitae saepe maiores. Vero explicabo itaque quis. Consequatur repellat quidem saepe, eum pariatur dolores?</div>
+</body>
+</html>

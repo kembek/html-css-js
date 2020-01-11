@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="pragma" content="no-cache">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>Тег</th>
+      <th>Описание</th>
+      <th>Аттрибуты</th>
+    </tr>
+    <tr>
+      <td>meta</td>
+      <td>Нужен для задания допольнительной информации о документе для браузера
+        также этот элемент должен обязательно состоять из ключа и значения</td>
+      <td>name or http-equiv | content | dir | lang | scheme </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <dl>
+          <dt>name</dt>
+          <dd>для указания имени свойства(ключ)</dd>
+          <dt>http-equiv</dt>
+          <dd>для указания имени свойства(ключ) вместо name</dd>
+          <dt>content</dt>
+          <dd>для указания значачения</dd>
+          <dt>dir</dt>
+          <dd>указывает направление текста</dd>
+          <dt>lang</dt>
+          <dd>указывает информацию о языке</dd>
+          <dt>scheme</dt>
+          <dd>указывает инструкции для обработки ключа и значачения</dd>
+        </dl>
+      </td>
+    </tr>
+  </table>
+
+  <h2>Code: </h2>
+  <pre>
+        <code>
+          < meta
+            < !--ключ  -->
+            name="viewport" 
+            < !-- значение -->
+            content="width=device-width, initial-scale=1.0">
+          < meta
+             < !--ключ  -->
+            http-equiv="X-UA-Compatible"
+            < !-- значение -->            
+            content="ie=edge">
+            < !-- для отключения кеша -->
+          < meta http-equiv="pragma" content="no-cache">
+          < !-- для редиректа в указанное время на указанный адрес -->
+          < meta http-equiv="refresh" content="0(time); url=http://example.com">
+          < !-- для обновления страницы в указанное время -->
+          < meta http-equiv="refresh" content="0(time);">
+
+
+        </code>
+      </pre>
+  <hr />
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drag'n'Drop</title>
+  <style>
+    .baboon {
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <img class="baboon" src="Baboon.svg" alt="Baboon">
+
+  <script>
+    const baboon = document.querySelector(".baboon");
+
+    function getCoords(element) {
+      const { top, left } = element.getBoundingClientRect();
+
+      return {
+        top: top - pageYOffset,
+        left: left - pageYOffset
+      }
+    }
+
+
+    function mouseDownHadler(e) {
+      this.style.position = "absolute";
+
+      var coords = getCoords(this),
+        shiftX = e.pageX - coords.left,
+        shiftY = e.pageY - coords.top;
+
+      move(e);
+      document.body.appendChild(this);
+      this.style.zIndex = 1000;
+
+
+      function move(e) {
+        const { pageX, pageY } = e;
+        // console.log(e.target);/
+        // console.groupCollapsed(name);
+        // console.log(`pageX: ${pageX}`)
+        // console.log(`pageY: ${pageY}`)
+        // console.groupEnd();
+
+        const { width, height, top, left } = baboon.getBoundingClientRect();
+
+        baboon.style.left = (e.pageX - shiftX) + "px";
+        baboon.style.top = (e.pageY - shiftY) + "px";
+
+      }
+
+      function mouseMoveHandler(e) {
+        move(e);
+      }
+
+      function mouseUpHandler(e) {
+        document.removeEventListener('mousemove', mouseMoveHandler);
+        e.target.removeEventListener('mouseup', mouseUpHandler);
+      }
+
+      // Drag'n'Drop move
+      document.addEventListener('mousemove', mouseMoveHandler);
+      // Drag'n'Drop end
+      baboon.addEventListener('mouseup', mouseUpHandler);
+    }
+
+
+    // Disable default drag
+    baboon.addEventListener('dragstart', (e) => e.preventDefault());
+
+    // Drag'n'Drop start
+    baboon.addEventListener('mousedown', mouseDownHadler);
+
+  </script>
+</body>
+
+</html>

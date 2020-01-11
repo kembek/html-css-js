@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Menu</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .menu-list {
+        font-size: 0;
+        background: black;
+      }
+
+      .menu-list__item {
+        display: inline-block;
+        width: 25%;
+        height: 100%;
+      }
+
+      .menu-list__link {
+        display: block;
+        font-size: 16px;
+        padding: 15px;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all 1s ease-in-out;
+      }
+
+      .menu-list__link:hover {
+        color: black;
+        background: lightgrey;
+     
+        animation: border-spinner 3s linear infinite;
+        transition: all 1s ease-in-out;
+
+        transition: animation 1s linear;
+      }
+
+      @keyframes border-spinner {
+        from {
+          background: linear-gradient(to bottom right, white, black);
+        }
+
+        to {
+          background: linear-gradient(to top left, white, black);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu">
+      <!-- menu or ul -->
+      <menu class="menu-list">
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#">item 1</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#">item 2</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#">item 3</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#">item 4</a>
+        </li>
+      </menu>
+    </nav>
+  </body>
+</html>

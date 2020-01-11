@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Footer fixed flex</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .main {
+        flex: 1;
+      }
+
+      .footer {
+        background: lightslategray;
+        border: 1px solid;
+        box-shadow: 0 0 2px lightgray, inset 0 0 6px red;
+        height: 80px;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, animi
+          repellendus tenetur laudantium, deserunt soluta asperiores aperiam
+          facilis porro quos perspiciatis iure impedit rem possimus, illo
+          excepturi fugit voluptate cumque?
+        </div>
+        <div>
+          Commodi ab eos animi aut mollitia temporibus quasi explicabo corrupti
+          aliquid voluptate provident minus architecto asperiores quas ut
+          sapiente, doloribus hic distinctio saepe magni ratione ea delectus
+          dolor exercitationem. Nostrum!
+        </div>
+        <div>
+          Odit blanditiis incidunt cumque numquam vel quae architecto laudantium
+          voluptatibus reprehenderit veritatis ipsum quaerat atque fugit, neque
+          labore error ab pariatur rerum non consequatur cupiditate earum
+          itaque! Amet, asperiores rerum.
+        </div>
+        <div>
+          Ex iste, qui incidunt aperiam sed modi aliquam iusto ratione beatae
+          quam ad praesentium facilis nihil maiores architecto! Fugiat et
+          aliquam corporis rem tenetur inventore repellat cumque iusto optio
+          libero?
+        </div>
+      </main>
+      <footer class="footer">
+        This is footer!
+      </footer>
+    </div>
+  </body>
+</html>

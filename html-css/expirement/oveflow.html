@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="head">
+        <div class="content"></div>
+    </div>
+    <style>
+        body {
+            height: 100vh;
+        }
+
+        div {
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
+        }
+
+        .head {
+            background: tomato;
+            height: 100px;
+            margin: auto auto;
+            overflow-y: scroll;
+            width: 500px;
+        }
+
+        .content {
+            background: aquamarine;
+            height: 500px;
+            margin: 10px auto;
+            width: 200px;
+        }
+
+        .content::before {
+            content: 'Hello content';
+            color: rgba(0, 0, 0, .8);
+        }
+    </style>
+</body>
+
+</html>

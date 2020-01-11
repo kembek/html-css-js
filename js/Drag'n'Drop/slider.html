@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slider</title>
+
+  <style>
+    body {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .container {
+      border: 2px solid gray;
+      height: 100px;
+      padding: 20px;
+      position: relative;
+      top: 200px;
+    }
+
+    .slider {
+      background: lightgray;
+      border-radius: 10px;
+      height: 20px;
+      width: 300px;
+    }
+
+    .slider__button {
+      background: blue;
+      border-radius: 5px;
+      height: 40px;
+      bottom: 10px;
+      position: relative;
+      transition: .1s all;
+      opacity: .3;
+      width: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="slider">
+      <div class="slider__button"></div>
+    </div>
+  </div>
+
+  <script>
+    const slider = document.querySelector(".slider");
+    const sliderButton = document.querySelector(".slider__button");
+
+    function move(e) {
+      sliderButton.style.left = e.offsetX + "px";
+    }
+
+    function handlerMouseDown(e) {
+      move(e);
+      slider.addEventListener('mousemove', handlerMouseMove);
+    }
+
+    function handlerMouseMove(e) {
+      // console.log(e.offsetX);
+      // console.dir(e.target);
+      if (slider !== e.target) return;
+      const { width } = e.target.getBoundingClientRect();
+      let end = slider.clientWidth - (sliderButton.clientWidth + parseInt(sliderButton.style.left));
+      console.log(end);
+      if (end <= 0) return;
+
+      move(e);
+    }
+
+    function handlerMouseUp(e) {
+      slider.removeEventListener('mousemove', handlerMouseMove);
+    }
+
+    sliderButton.addEventListener('mousedown', handlerMouseDown);
+    sliderButton.addEventListener('mouseup', handlerMouseUp);
+
+
+  </script>
+</body>
+
+</html>

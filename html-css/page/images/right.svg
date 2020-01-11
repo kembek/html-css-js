@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #76bee4;
+        stroke: #76bee4;
+        stroke-width: 5px;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Многоугольник_1" data-name="Многоугольник 1" class="cls-1" d="M49,30L11.5,51.651V8.349Z"/>
+  <path id="Многоугольник_4" data-name="Многоугольник 4" class="cls-2" d="M37.352,29.542L16.016,41.86V17.224Z"/>
+  <path id="Многоугольник_4_копия" data-name="Многоугольник 4 копия" class="cls-2" d="M42.007,29.5L23.987,39.987V19Z"/>
+</svg>

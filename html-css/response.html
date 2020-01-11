@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Response</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      height: 100vh;      
+    }
+
+    div {
+      height: 100%;
+    }
+
+    .red {
+      background-color: #ff0000;
+    }
+
+    .blue {
+      background-color: #0000ff;
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    @media only screen and (max-width: 900px)  {
+      .blue {
+        width: 500px;
+      }
+    }
+
+    @media only screen and (max-width: 600px)  {
+      .blue {
+        width: 300px
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="red">
+    <div class="blue"></div>
+  </div>
+</body>
+</html>

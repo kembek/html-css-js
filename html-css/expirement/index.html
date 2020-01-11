@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Expirement with text</title>
+    <style type="text/css">
+        .head-text {
+            /* font: normal 40px; */
+            /* font: italic 900 40px Arial; */
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+            font-style: italic;
+            font-weight: normal;
+            text-align: center;
+            text-decoration: underline red double;
+            text-decoration-line: overline;
+            text-decoration-color: blue;
+            text-decoration-style: double;
+            line-height: 4;
+            /* word-break: break-all; */
+        }
+
+        p.text {
+            /* filter: blur(0.7910px); */
+            line-break: 25;
+            line-height: 2;
+            /* text-align: justify;             */
+            /* text-indent: 25px;
+            text-shadow: 30px 100px 10px #535353;
+            text-transform: capitalize; */
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li a {
+
+            background-color: lightcoral;
+            border: 2px double black;
+            color: whitesmoke;
+            /* display: inline-block; */
+            font-size: 24px;
+            height: 200px;
+            margin: 20px;
+            padding: 5px;
+            text-decoration: none;
+            width: 200px;
+        }
+
+        strong {
+            color: tomato;
+            font-stretch: ultra-expanded;
+            font-size: 1.5em;
+        }
+
+        em {
+            color: dodgerblue;
+            font-style: italic;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .custom_sup {
+            vertical-align: 10px;
+        }
+
+        .custom_sub {
+            vertical-align: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="head-text">I create devices working on alternating current, multiphase systems, a synchronous generator and an asynchronous electric
+        motor.
+    </h1>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation
+        <strong>ullamco</strong> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur.
+        <em>Excepteur</em> sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <ul class="text">
+        <li class="link">
+            <a href="#1">First</a>
+        </li>
+        <li class="link">
+            <a href="#">Second</a>
+        </li>
+        <li class="link">
+            <a href="#">Three</a>
+        </li>
+    </ul>
+
+    <div class="formul">
+        <span>
+            H
+            <sub>2</sub>0
+        </span>,
+        <span>x
+            <sup>2</sup>
+        </span>
+        <span>SS
+            <span class="custom_sup">5</span>
+        </span>
+        <span>FF
+                <span class="custom_sub">9</span>
+            </span>
+    </div>
+</body>
+
+</html>

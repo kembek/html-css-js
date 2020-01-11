@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        height: 100vh;
+      }
+
+      .spinner {
+        height: 100%;
+        position: relative;
+      }
+
+      .spinner__circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border: 5px solid;
+        border-radius: 50%;
+        border-top-color: red;
+        height: 50px;
+        width: 50px;
+      }
+
+    </style>
+  <head>
+  <body>
+    <div class="spinner">
+      <div class="spinner__circle"></div>
+    </div>
+  </body>
+</html>

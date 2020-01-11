@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid structure</title>
+    <style>
+        @font-face {
+            font-family: 'next art';
+            src: url('NEXT ART_Thin.otf');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'next-art';
+            font-size: 42px;
+            text-align: center;
+        }
+
+        .header {
+            grid-area: header;
+            background: tomato;
+        }
+
+        .main {
+            grid-area: main;
+            background: teal;
+        }
+
+        .left {
+            grid-area: left;
+            background: chartreuse;
+        }
+
+        .right {
+            grid-area: right;
+            background: yellowgreen;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: blue;
+            color: white;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: "header header header" "left main right" "footer footer footer";
+            grid-template-columns: 150px 1fr 150px;
+            grid-template-rows: 100px 1fr 100px;
+            min-height: 100vh;           
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                grid-template-areas: "header" "left" "main" "right" "footer";
+                grid-template-columns: 100%;
+                grid-template-rows: 200px 130px 1fr 130px 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            Header
+        </header>
+        <main class="main">Main</main>
+        <aside class="left">Menu left</aside>
+        <aside class="right">Menu right</aside>
+        <footer class="footer">Footer</footer>
+        
+    </div>
+</body>
+
+</html>

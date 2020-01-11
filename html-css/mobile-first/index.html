@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mobile first</title>
+    <style>
+      html {
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      .container {
+        background-color: tomato;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .color {
+        color: white;
+        border: 2px solid greenyellow;
+      }
+
+      /* sm */
+      @media (min-width: 576px) {
+        .container {
+          background: green;
+          font-size: 2rem;
+        }
+      }
+
+      /* md */
+      @media (min-width: 768px) {
+        .container {
+          background: yellow;
+          font-size: 5rem;
+        }
+      }
+
+      /* lg */
+      @media (min-width: 992px) {
+        .container {
+          background: red;
+          font-size: 8rem;
+        }
+      }
+
+      /* xl */
+      @media (min-width: 1200px) {
+        .container {
+          background: black;
+          font-size: 11rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="color"></h1>
+    </div>
+    <script>
+      const container = document.querySelector(".container");
+      const detectColor = document.querySelector(".color");
+
+      function setColorName(width) {
+        let color = "";
+        if (width >= 576 && width < 768) {
+          color = "green";
+        } else if (width >= 768 && width < 992) {
+          color = "yellow";
+        } else if (width >= 922 && width < 1200) {
+          color = "red";
+        } else if (width >= 1200) {
+          color = "black";
+        } else {
+          color = "tomato";
+        }
+
+        if (detectColor.textContent !== color) {
+          detectColor.textContent = color;
+        }
+      }
+
+      window.addEventListener("resize", function(e) {
+        setColorName(document.documentElement.clientWidth);
+      });
+
+      window.addEventListener("load", function(e) {
+        setColorName(document.documentElement.clientWidth);
+      });
+    </script>
+  </body>
+</html>

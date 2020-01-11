@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Context menu</title>
+  <style>
+    .square {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      transition: all 5s linear;
+    }
+
+    .square.danger {
+      background: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="square danger">
+
+  </div>
+  <script>
+    const square = document.querySelector(".square.danger");
+   
+    square.addEventListener('click', handler);
+
+    function handler (event) {
+      console.dir(this.getBoundingClientRect());
+    }
+
+    document.oncontextmenu = function (event) {
+      event.preventDefault();
+      console.log(event);
+
+      square.style.top = event.y + "px";
+      square.style.left = event.x + "px";
+    }
+
+    // setInterval(() => {
+    // const simContext = new Event('contextmenu')
+
+    // document.dispatchEvent(simContext);
+      
+    // }, 1000);
+    
+  </script>
+</body>
+</html>

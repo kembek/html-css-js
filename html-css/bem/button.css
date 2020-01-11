@@ -1,0 +1,8 @@
+.button {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  cursor: pointer;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  text-transform: capitalize;
+}

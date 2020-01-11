@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document selector</title>
+  </head>
+  <body>
+    <script src="main.js"></script>
+    <!-- some some -->
+    <h1>hello</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum deserunt dicta, officiis dignissimos excepturi aliquid ipsam cupiditate delectus suscipit voluptas non doloremque facere ducimus, at, nobis laborum. Ullam, repellat aut.</p>
+    <p>Lorem ipsum <strong>dolor</strong> sit amet <strike>consectetur</strike> adipisicing <em>elit</em>. Dolore sequi <del>assumenda</del> veritatis <sub>sunt</sub> ipsum architecto <sup>saepe</sup>, natus <stroke>similique</stroke>, quis <q>voluptates</q> molestiae fuga quidem praesentium iusto debitis suscipit! Quidem, unde! Veniam!</p>
+   <p><blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit.</blockquote> Dolorum deserunt <mark>dicta</mark>, officiis dignissimos excepturi aliquid ipsam cupiditate delectus suscipit voluptas non doloremque facere ducimus, at, nobis laborum. Ullam, repellat aut.</p>
+   <script>
+     console.groupCollapsed("Next sibling");
+     function ss(el) {
+  let next = el.nextSibling;
+  
+  if (!next) {
+    return;
+  }
+  console.log(next);
+  return ss(next);
+}
+ss(document.body.firstChild);
+console.groupEnd("Next sibling");
+   </script>
+   <script>
+    console.group("Previous sibling");
+    // function bl(bs) {
+    //   let previous = bs.previousSibling;
+    //   console.log(previous);
+
+    //   if(!previous) {
+    //     return;
+    //   }
+
+    //   return previous;
+    // }
+    // bl(document.body.lastChild)
+    console.log(document.body.childNodes)
+    for(let i = document.body.childNodes.length; i > -1; --i) {
+      console.log(document.body.childNodes[i]);
+      
+    }
+    console.groupEnd("Previous sibling");
+
+    </script>
+  </body>
+</html>

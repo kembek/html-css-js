@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        /* 
+            align-self: center;  задает положение flex элемента !!!ВАЖНО: только для указнного элемента (по вертикали)
+            align-items: center;  задает положение flex элементов (по вертикали)
+            justify-content: center; -- задает положение flex элементов (по горизонтали)
+            flex-direction -- для изменения напраления элементов (по вертикали | по горизонтали)
+            flex-wrap -- правило для переноса элементов если контейнер не помещает элементы
+            order -- для изменения порядка
+            flex-grow -- задает (умножает) размер элементу. Увеличивает элемент чем другие на заданное значение
+            flex-shrink -- задает правило уменьшения элемента
+            flex-basic -- задает минимальный размер элемента
+            стенографическое свойство
+            flex: flex-grow flex-shrink flex-basic;
+            Simple: flex: 1 1 200px;
+            flex: flex-grow flex-basic;
+            Simple: flex: 1 200px;
+        */
+
+        .flex-container {
+            align-items: stretch;
+            
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+             /* align-content: center; */
+            display: flex;
+            /* height: 500px; */
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            justify-content: center;
+            height: 500px;
+        }
+
+        /* .flex-item {
+            flex-grow: 1;     
+        } */
+
+        .element-1 {
+           margin: auto;
+        }
+/* 
+        .element-3 {
+            order: 100;
+            align-self: stretch;
+            flex-grow: 100;     
+        }
+
+        .element-3 {
+            order: 100;
+            align-self: flex-end;
+        } */
+    </style>
+</head>
+
+<body>
+    <h1>Flexbox</h1>
+    <div class="flex-container">
+        <div class="flex-item element-1">1</div>
+        <!-- <div class="flex-item element-2">2</div>
+        <div class="flex-item element-3">3</div>
+        <div class="flex-item element-4">4</div>
+        <div class="flex-item element-5">5</div>
+        <div class="flex-item element-6">6</div> -->
+    </div>
+</body>
+
+</html>

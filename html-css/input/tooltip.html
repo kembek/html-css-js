@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* * {
+        outline: blue solid 1px;
+      } */
+      body > div {
+        margin: 50px;
+      }
+
+      .tooltip {
+        display: inline-block;
+        color: white;
+        top: 0;
+        left: 0;
+        position: relative;
+      }
+
+      .tooltip__arrow {
+        border-color: transparent;
+        border-style: solid;
+        display: inline-block;
+        position: absolute;
+        left: auto;
+      }
+
+      .left {
+        border-width: 10px 10px 10px 0;
+        border-right-color: black;
+        left: -8px;
+      }
+      .right {
+        border-width: 10px 0 10px 10px;
+        border-left-color: black;
+        right: -8px;
+      }
+
+      .left,
+      .right {
+        top: 50%;
+        margin-top: -10px;
+      }
+
+      .top {
+        border-width: 0 10px 10px 10px;
+        border-bottom-color: black;
+        top: -8px;
+      }
+      .bottom {
+        border-width: 10px 10px 0 10px;
+        border-top-color: black;
+        bottom: -8px;
+      }
+
+      .top,
+      .bottom {
+        left: 50%;
+        margin-left: -10px;
+      }
+
+      .tooltip__content {
+        background: black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="tooltip">
+        <div class="tooltip__arrow left"></div>
+        <div class="tooltip__content">This is tooltip left</div>
+      </div>
+    </div>
+    <div>
+      <div class="tooltip">
+        <div class="tooltip__arrow right"></div>
+        <div class="tooltip__content">This is tooltip right</div>
+      </div>
+    </div>
+    <div>
+      <div class="tooltip">
+        <div class="tooltip__arrow bottom"></div>
+        <div class="tooltip__content">This is tooltip bottom</div>
+      </div>
+    </div>
+    <div>
+      <div class="tooltip">
+        <div class="tooltip__arrow top"></div>
+        <div class="tooltip__content">This is tooltip top</div>
+      </div>
+    </div>
+  </body>
+</html>

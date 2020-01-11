@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border: 2px solid black;
+      }
+
+      .tooltip .tooltip__text {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+      }
+
+      .tooltip .tooltip__text::after {
+        content: " ";
+        position: absolute;
+
+        border-width: 5px;
+        border-style: solid;
+      }
+
+      .tooltip:hover .tooltip__text {
+        visibility: visible;
+      }
+
+      .tooltip .left {
+        top: -5px;
+        left: 105%;
+      }
+
+      .tooltip .right {
+        top: -5px;
+        right: 105%;
+      }
+
+      .tooltip .top {
+        width: 120px;
+        bottom: 120%;
+        left: 50%;
+        margin-left: -60px;
+      }
+
+      .tooltip .bottom {
+        width: 120px;
+        top: 120%;
+        left: 50%;
+        margin-left: -60px;
+      }
+
+      .tooltip .top::after {
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-color: black transparent transparent transparent;
+      }
+
+      .tooltip .bottom::after {
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-color: transparent transparent black transparent;
+      }
+
+      .tooltip .left::after {
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        border-color: transparent black transparent transparent;
+      }
+
+      .tooltip .right::after {
+        top: 50%;
+        left: 100%;
+        margin-top: -5px;
+        border-color: transparent transparent transparent black;
+      }
+
+      .some {
+        margin: 100px;
+      }
+
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="some"></div>
+    <div class="tooltip">
+      <p>The quick brown fox over jump the lazy dog.</p>
+      <div class="tooltip__text left">tooltip left</div>
+    </div>
+    <div class="some"></div>
+    <div class="tooltip">
+      <p>The quick brown fox over jump the lazy dog.</p>
+      <div class="tooltip__text right">tooltip right</div>
+    </div>
+    <div class="some"></div>
+    <div class="tooltip">
+      <p>The quick brown fox over jump the lazy dog.</p>
+      <div class="tooltip__text top">tooltip top</div>
+    </div>
+    <div class="some"></div>
+    <div class="tooltip">
+      <p>The quick brown fox over jump the lazy dog.</p>
+      <div class="tooltip__text bottom">tooltip bottom</div>
+    </div>
+  </body>
+</html>

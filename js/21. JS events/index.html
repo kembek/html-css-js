@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      div[class*="deep"] {
+        border-width: 5px;
+        border-style: solid;
+        padding: 20px;
+      }
+
+      .one__deep {
+        border-color: red;
+        height: 40vh;
+        width: 80%;
+      }
+
+      .two__deep {
+        border-color: green;
+        height: 10vh;
+        width: 60%;
+      }
+
+      .third__deep {
+        border-color: blue;
+        height: 5vh;
+        width: 30%;
+      }
+
+      .result {
+        margin-top: 80px;
+      }
+
+      .span:nth-child(1) {
+        color: red;
+      }
+
+      .span:nth-child(2) {
+        color: green;
+      }
+
+      .span:nth-child(3) {
+        color: blue;
+      }
+
+      .bubble {
+        border: 2px solid black;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bubble">
+      <h2>Всплытие</h2>
+      <div class="one__deep">
+        <div class="two__deep">
+          <div class="third__deep"></div>
+        </div>
+      </div>
+
+      <div class="result">
+        <div><label>THIS: </label> <span class="this"></span></div>
+        <div><label>TARGET: </label> <span class="target"></span></div>
+        <div>
+          <label>CURRENT-TARGET: </label> <span class="current-target"></span>
+        </div>
+      </div>
+    </div>
+    <div class="flow">
+      <h2>Flow</h2>
+      <input type="text" name="user_name" id="user" size="100" />
+    </div>
+
+    <input type="button" id="button" value="Нажми меня" />
+    <input type="text" id="text" size="60" />
+
+    <script src="main.js"></script>
+  </body>
+</html>
