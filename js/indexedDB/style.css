@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(45deg, orangered, black);
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: orange;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form {
+  background-color: black;
+  color: white;
+  padding: 8px;
+}
+.form-field {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.form-label {
+  display: inline-block;
+  width: 5%;
+}
+.form-input {
+  display: inline-block;
+  width: 90%;
+}
+.button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.button--primary {
+  color: black;
+  background-color: white;
+  text-transform: uppercase;
+  border: 1px solid red;
+  font-weight: bolder;
+  transition: all 0.3s;
+}
+
+.button--primary:hover {
+  background-color: black;
+  color: white;
+}

@@ -3,13 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
   <head>
   <body>
     
 
     <h1>Init indexedDB</h1>
 
-    <p id="text"></p>
+    <form class="form" id="todo_form">
+      <h2>Todo form</h2>
+      <div class="form-field">
+        <label class="form-label" for="title">
+          Title
+        </label>        
+        <input class="form-input" type="text" id="title" name="title">
+      </div>
+      <div class="form-field">
+        <label class="form-label" for="body">
+          Body
+        </label>        
+        <textarea class="form-input" id="body" name="body"></textarea>
+      </div>
+
+      <button class="button button--primary" type="submit">Create</button>
+
+    </form>
+    <hr>
+    <div>
+      <h2>Tasks</h2>
+      <hr>
+      <ul id="task_list"></ul>
+    </div>
 
     
 
