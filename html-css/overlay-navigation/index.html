@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overlay navigation</title>
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="fullPageMenu" id="nav">
+      <div class="banner">
+        <!-- <img src="./bg_img.png" alt="Navigation background image" /> -->
+        <svg
+          role="image"
+          aria-label="Just image"
+          preserveAspectRatio="xMidYMid slice"
+          viewBox="0 0 1450 1080"
+        >
+          <image xlink:href="./bg_img.png"></image>
+        </svg>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="#" data-text="Home">Home</a></li>
+          <li><a href="#" data-text="About">About</a></li>
+          <li><a href="#" data-text="Services">Services</a></li>
+          <li><a href="#" data-text="Portfolio">Porfolio</a></li>
+          <li><a href="#" data-text="Team">Team</a></li>
+          <li><a href="#" data-text="Contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <span class="menuicon" id="toggle" onclick="toggleNavigation()"></span>
+    <script>
+      function toggleNavigation() {
+        const navEl = document.getElementById("nav");
+        const toggleEl = document.getElementById("toggle");
+
+        navEl.classList.toggle("active");
+        toggleEl.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

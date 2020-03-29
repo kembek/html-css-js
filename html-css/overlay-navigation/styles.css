@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Teko&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Teko", sans-serif;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.fullPageMenu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+  transition: 0.5s;
+}
+.fullPageMenu.active {
+  top: 0;
+}
+.fullPageMenu .banner {
+  position: relative;
+  min-width: 600px;
+  max-width: 800px;
+  height: 100%;
+}
+.fullPageMenu .banner svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: 50px;
+}
+.fullPageMenu .nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.fullPageMenu .nav ul {
+  position: relative;
+}
+.fullPageMenu .nav ul li {
+  position: relative;
+  list-style: none;
+  padding: 0 20px;
+  margin: 5px 0;
+  overflow: hidden;
+  display: table;
+}
+.fullPageMenu .nav ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff0047;
+  transition: transform 0.5s ease-in-out;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+.fullPageMenu .nav ul li:hover::before {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+.fullPageMenu .nav ul li a {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1em;
+  padding-top: 12px;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out;
+}
+.fullPageMenu .nav ul li a:before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  color: #ffffff;
+}
+.fullPageMenu .nav ul li:hover a {
+  transform: translateY(-100%);
+  color: #ffffff;
+}
+.menuicon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  background-image: url(menu.svg);
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: 10px;
+  cursor: pointer;
+}
+.menuicon.active {
+  background-image: url(close.svg);
+}
+@media screen and (max-width: 991px) {
+  .banner {
+    display: none;
+  }
+}
